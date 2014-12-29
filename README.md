@@ -42,4 +42,8 @@ Add CommentList and CommentForm components.
 
 Add Comment component and examples of its use.
 
+#### Step 5
+
+Hook up data model.
+
 And visit <http://localhost:3000/>. Try opening multiple tabs!
