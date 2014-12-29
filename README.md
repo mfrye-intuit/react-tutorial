@@ -24,4 +24,18 @@ python server.py
 ruby server.rb
 ```
 
+### Steps
+
+#### Step 1
+
+Simple Hello World view using in browser JSX transformer.
+
+#### Step 2
+
+Add gulp build process to pre-compile JSX and serve files out of dist folder.
+
+#### Step 3
+
+
+
 And visit <http://localhost:3000/>. Try opening multiple tabs!

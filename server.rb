@@ -15,7 +15,7 @@ comments = react_version = JSON.parse(File.read('./_comments.json'))
 
 puts 'Server started: http://localhost:3000/'
 
-root = File.expand_path './src'
+root = File.expand_path './dist'
 server = WEBrick::HTTPServer.new :Port => 3000, :DocumentRoot => root
 
 server.mount_proc '/comments.json' do |req, res|
