@@ -14,7 +14,7 @@ import cgi
 from BaseHTTPServer import HTTPServer
 from SimpleHTTPServer import SimpleHTTPRequestHandler
 
-PUBLIC_PATH = "public"
+PUBLIC_PATH = "src"
 
 comments = json.loads(open('_comments.json').read())
 
