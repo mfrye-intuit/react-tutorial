@@ -1,3 +1,11 @@
+var API = {
+  getComments: function() {
+    return $.ajax({
+      url: "comments.json",
+      dataType: 'json'
+    });
+  }
+};
 
 var CommentBox = React.createClass({
   getInitialState: function() {
@@ -6,15 +14,13 @@ var CommentBox = React.createClass({
 
   componentDidMount: function() {
     this._loadComments();
+    setInterval(this._loadComments, this.props.pollInterval);
   },
 
   _loadComments: function() {
     var _this = this;
 
-    $.ajax({
-      url: "comments.json",
-      dataType: 'json'
-    })
+    API.getComments()
     .done(function(data) {
       _this.setState({data: data});
     })
@@ -76,6 +82,6 @@ var Comment = React.createClass({
 
 
 React.render(
-  <CommentBox />,
+  <CommentBox pollInterval={2000} />,
   document.getElementById('content')
 );

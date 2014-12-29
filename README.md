@@ -50,4 +50,8 @@ Hook up data model.
 
 Fetching data from the server.
 
+#### Step 7
+
+Abstract call to API object, add auto polling.
+
 And visit <http://localhost:3000/>. Try opening multiple tabs!
