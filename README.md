@@ -68,6 +68,6 @@ Optimize - Add new comments to state immediately. Support markdown.
 
 #### Step 11
 
-CommonJS
+CommonJS setup
 
 And visit <http://localhost:3000/>. Try opening multiple tabs!
