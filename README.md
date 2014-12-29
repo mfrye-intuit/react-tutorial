@@ -70,4 +70,8 @@ Optimize - Add new comments to state immediately. Support markdown.
 
 CommonJS setup
 
+#### Step 12
+
+Testing with Jest
+
 And visit <http://localhost:3000/>. Try opening multiple tabs!

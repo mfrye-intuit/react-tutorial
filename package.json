@@ -6,7 +6,8 @@
   "dependencies": {
     "body-parser": "^1.4.3",
     "express": "^4.4.5",
-    "react": "^0.12.2"
+    "react": "^0.12.2",
+    "react-tools": "^0.12.2"
   },
   "devDependencies": {
     "browserify": "^8.0.2",
@@ -18,6 +19,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
+  },
+  "dependencies": {
+    "react": "*",
+    "react-tools": "*"
+  },
+  "jest": {
+    "testDirectoryName": "test",
+    "scriptPreprocessor": "<rootDir>/config/preprocessor.js",
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"]
   },
   "repository": {
     "type": "git",
