@@ -43,7 +43,7 @@ var CommentBox = React.createClass({
   _handleCommentSubmit: function(comment) {
     var _this = this;
     var comments = this.state.data;
-    var newComments = comments.push(comment);
+    var newComments = comments.concat([comment]);
     this.setState({data: newComments});
 
     API.addComment(comment)
