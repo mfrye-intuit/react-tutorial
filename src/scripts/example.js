@@ -1,14 +1,38 @@
-var data = [
-  {author: "Bruce Wayne", comment: "I am Batman."},
-  {author: "Clark Kent", comment: "I am Clark Kent."}
-];
+var API = {
+  getComments: function() {
+    return $.ajax({
+      url: "comments.json",
+      dataType: 'json'
+    });
+  }
+};
 
 var CommentBox = React.createClass({
+  getInitialState: function() {
+    return {data: []};
+  },
+
+  componentDidMount: function() {
+    this._loadComments();  
+  },
+
+  _loadComments: function() {
+    var _this = this;
+
+    API.getComments()
+    .done(function(data) {
+      _this.setState({data: data});
+    })
+    .error(function() {
+      console.log('Error!')
+    });
+  },
+
   render: function() {
     return (
       <div className="commentBox">
         <h1>Comments</h1>
-        <CommentList data={this.props.data} />
+        <CommentList data={this.state.data} />
         <CommentForm />
       </div>
     );
@@ -57,6 +81,6 @@ var Comment = React.createClass({
 
 
 React.render(
-  <CommentBox data={data} />,
+  <CommentBox />,
   document.getElementById('content')
 );

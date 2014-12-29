@@ -46,4 +46,8 @@ Add Comment component and examples of its use.
 
 Hook up data model.
 
+#### Step 6
+
+Fetching data from the server.
+
 And visit <http://localhost:3000/>. Try opening multiple tabs!
