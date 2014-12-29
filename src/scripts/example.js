@@ -4,6 +4,15 @@ var API = {
       url: "/comments",
       dataType: 'json'
     });
+  },
+
+  addComment: function(data) {
+    return $.ajax({
+      url: "/comments",
+      dataType: 'json',
+      type: 'POST',
+      data: data
+    });
   }
 };
 
@@ -29,12 +38,24 @@ var CommentBox = React.createClass({
     });
   },
 
+  _handleCommentSubmit: function(comment) {
+    var _this = this;
+
+    API.addComment(comment)
+    .done(function(data) {
+      _this.setState({data: data});
+    })
+    .error(function() {
+      console.log('Error!')
+    });
+  },
+
   render: function() {
     return (
       <div className="commentBox">
         <h1>Comments</h1>
         <CommentList data={this.state.data} />
-        <CommentForm />
+        <CommentForm submitComment={this._handleCommentSubmit} />
       </div>
     );
   }
@@ -67,7 +88,7 @@ var CommentForm = React.createClass({
       return;
     }
 
-    // TODO: Add to CommentsList and post to server
+    this.props.submitComment({author: author, comment: comment})
 
     this.refs.author.getDOMNode().value = '';
     this.refs.comment.getDOMNode().value = '';

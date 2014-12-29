@@ -58,4 +58,8 @@ Abstract call to API object, add auto polling.
 
 Form for adding new comments.
 
+#### Step 9
+
+Add new comments to CommentList and post to server.
+
 And visit <http://localhost:3000/>. Try opening multiple tabs!
