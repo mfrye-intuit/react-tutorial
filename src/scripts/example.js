@@ -109,7 +109,7 @@ var CommentForm = React.createClass({
         </div>
 
         <div className="form-group">
-          <input type="text" className="form-control" placeholder="Your comment..." ref="comment" />
+          <textarea type="text" className="form-control" placeholder="Your comment..." ref="comment"></textarea>
         </div>
 
         <button type="submit" className="btn btn-primary">Submit</button>
