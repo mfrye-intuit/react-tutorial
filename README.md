@@ -62,4 +62,8 @@ Form for adding new comments.
 
 Add new comments to CommentList and post to server.
 
+#### Step 10
+
+Optimize - Add new comments to state immediately. Support markdown.
+
 And visit <http://localhost:3000/>. Try opening multiple tabs!

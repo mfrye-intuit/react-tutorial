@@ -1,3 +1,5 @@
+var converter = new Showdown.converter();
+
 var API = {
   getComments: function() {
     return $.ajax({
@@ -40,6 +42,9 @@ var CommentBox = React.createClass({
 
   _handleCommentSubmit: function(comment) {
     var _this = this;
+    var comments = this.state.data;
+    var newComments = comments.push(comment);
+    this.setState({data: newComments});
 
     API.addComment(comment)
     .done(function(data) {
@@ -65,7 +70,9 @@ var CommentList = React.createClass({
   render: function() {
     var comments = this.props.data.map(function (comment) {
       return (
-        <Comment author={comment.author} comment={comment.comment} />
+        <Comment author={comment.author}>
+          {comment.comment}
+        </Comment>
       )
     });
 
@@ -113,12 +120,14 @@ var CommentForm = React.createClass({
 
 var Comment = React.createClass({
   render: function() {
+    var rawMarkup = converter.makeHtml(this.props.children.toString());
+
     return (
       <div className="comment">
         <h2 className="commentAuthor">
           {this.props.author}
         </h2>
-        {this.props.comment}
+        <span dangerouslySetInnerHTML={{__html: rawMarkup}} />
       </div>
     )
   }
