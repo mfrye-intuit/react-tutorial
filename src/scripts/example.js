@@ -12,7 +12,7 @@ var CommentBox = React.createClass({
     var _this = this;
 
     $.ajax({
-      url: "comments.json",
+      url: "/comments",
       dataType: 'json'
     })
     .done(function(data) {
