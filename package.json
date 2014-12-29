@@ -5,11 +5,15 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.4.3",
-    "express": "^4.4.5"
+    "express": "^4.4.5",
+    "react": "^0.12.2"
   },
   "devDependencies": {
+    "browserify": "^8.0.2",
     "gulp": "^3.8.10",
-    "gulp-react": "^2.0.0"
+    "gulp-react": "^2.0.0",
+    "reactify": "^0.17.1",
+    "vinyl-source-stream": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
