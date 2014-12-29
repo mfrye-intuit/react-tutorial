@@ -36,6 +36,8 @@ Add gulp build process to pre-compile JSX and serve files out of dist folder.
 
 #### Step 3
 
+Add CommentList and CommentForm components.
 
+#### Step 4
 
 And visit <http://localhost:3000/>. Try opening multiple tabs!
