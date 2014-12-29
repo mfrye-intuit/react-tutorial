@@ -1,11 +1,3 @@
-var API = {
-  getComments: function() {
-    return $.ajax({
-      url: "comments.json",
-      dataType: 'json'
-    });
-  }
-};
 
 var CommentBox = React.createClass({
   getInitialState: function() {
@@ -13,13 +5,16 @@ var CommentBox = React.createClass({
   },
 
   componentDidMount: function() {
-    this._loadComments();  
+    this._loadComments();
   },
 
   _loadComments: function() {
     var _this = this;
 
-    API.getComments()
+    $.ajax({
+      url: "comments.json",
+      dataType: 'json'
+    })
     .done(function(data) {
       _this.setState({data: data});
     })
