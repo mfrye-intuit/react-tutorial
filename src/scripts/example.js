@@ -1,7 +1,7 @@
 var API = {
   getComments: function() {
     return $.ajax({
-      url: "comments.json",
+      url: "/comments",
       dataType: 'json'
     });
   }
