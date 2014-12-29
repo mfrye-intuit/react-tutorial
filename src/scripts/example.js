@@ -57,11 +57,35 @@ var CommentList = React.createClass({
 });
 
 var CommentForm = React.createClass({
+  _handleSubmit: function(e) {
+    e.preventDefault();
+
+    var author = this.refs.author.getDOMNode().value.trim();
+    var comment = this.refs.comment.getDOMNode().value.trim();
+
+    if (!comment || !author) {
+      return;
+    }
+
+    // TODO: Add to CommentsList and post to server
+
+    this.refs.author.getDOMNode().value = '';
+    this.refs.comment.getDOMNode().value = '';
+  },
+
   render: function() {
     return (
-      <div className="commentForm">
-        Hello world! I am a CommentForm.
-      </div>
+      <form className="commentForm" onSubmit={this._handleSubmit}>
+        <div className="form-group">
+          <input type="text" className="form-control" placeholder="Your name" ref="author" />
+        </div>
+
+        <div className="form-group">
+          <input type="text" className="form-control" placeholder="Your comment..." ref="comment" />
+        </div>
+
+        <button type="submit" className="btn btn-primary">Submit</button>
+      </form>
     )
   }
 });

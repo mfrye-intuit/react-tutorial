@@ -54,4 +54,8 @@ Fetching data from the server.
 
 Abstract call to API object, add auto polling.
 
+#### Step 8
+
+Form for adding new comments.
+
 And visit <http://localhost:3000/>. Try opening multiple tabs!
