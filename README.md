@@ -40,4 +40,6 @@ Add CommentList and CommentForm components.
 
 #### Step 4
 
+Add Comment component and examples of its use.
+
 And visit <http://localhost:3000/>. Try opening multiple tabs!
