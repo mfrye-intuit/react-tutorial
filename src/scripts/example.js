@@ -29,7 +29,7 @@ var CommentForm = React.createClass({
       </div>
     )
   }
-})
+});
 
 React.render(
   <CommentBox />,
