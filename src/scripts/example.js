@@ -1,3 +1,10 @@
+
+// Let's make things interesting!
+
+// 1. We've added an external file called Showdown, which enables us
+//    to use markdown in our input.
+//
+//    Here we create a new instance of the converter
 var converter = new Showdown.converter();
 
 var API = {
@@ -66,6 +73,9 @@ var CommentBox = React.createClass({
   }
 });
 
+// 2. We've changed the syntax of the Comment component to where we assign
+//    the comment data as children of the component.
+//    This enables us to have multiple elements in the comment text if desired.
 var CommentList = React.createClass({
   render: function() {
     var comments = this.props.data.map(function (comment) {
@@ -118,6 +128,16 @@ var CommentForm = React.createClass({
   }
 });
 
+// 3. Here we've changed the code to reference this.props.children.
+//    This is similar to "transclusion" if you're familar with AngularJs.
+//
+//    Basically we're referencing all the children elements passed in,
+//    converting the string using Showdown, then pass the rawMarkup to the element.
+//
+//    React has a built in safeguard to protect against malicious code being executed.
+//    So in order to bypass this, we use the attribute called "dangerouslySetInnerHTML"
+//    where we want the html to appear. Just make sure you know the source of the code,
+//    and it's safe to run!
 var Comment = React.createClass({
   render: function() {
     var rawMarkup = converter.makeHtml(this.props.children.toString());
