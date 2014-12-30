@@ -1,3 +1,6 @@
+
+// API for making AJAX calls
+
 var API = {
   getComments: function() {
     return $.ajax({
