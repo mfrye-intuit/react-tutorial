@@ -11,9 +11,10 @@ var CommentBox = React.createClass({
   }
 });
 
-// Notice we've hardcoded a few comments here for demonstration purposes
-// Also notices the properties (or props) that we've given each Comment
-// We are defining author / comment props and passing it a value
+// 2. Notice we've hardcoded a few comments here for demonstration purposes.
+//    Also notice the props that we've given each Comment.
+//
+//    We are defining author / comment props and passing it a value
 var CommentList = React.createClass({
   render: function() {
     return (
@@ -35,9 +36,10 @@ var CommentForm = React.createClass({
   }
 });
 
-// This is our new component that will be the actual comment
-// this.props... references the props passed in when this component is created
-// We want the author prop to go in the header and the comment prop in the body
+// 1. This is our new component that will be the actual comment.
+//    "this.props" references the properties (or props) passed in when this component is created.
+//
+//    We want the author prop to go in the header and the comment prop in the body
 var Comment = React.createClass({
   render: function() {
     return (
