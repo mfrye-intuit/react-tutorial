@@ -1,3 +1,10 @@
+
+// The CommentBox component
+//
+// This houses the commenting feature and all the components to make this feature work.
+// It creates a list of comments fetched from the server, and has a form for adding
+// new comments.
+
 var React       = require('react');
 var API         = require('../api');
 var CommentList = require('./comment-list');

@@ -1,3 +1,9 @@
+
+// The CommentList Component
+//
+// This is the list holding created comments
+// using the Comment component
+
 var React       = require('react');
 var Comment     = require('./comment');
 
