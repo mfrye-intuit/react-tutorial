@@ -1,5 +1,5 @@
 
-// Adding CommonJS - in this instance Browersify
+// Step 10 - Adding CommonJS (n this instance Browersify)
 // 
 // This file was getting rather large and it was becoming a challenge to read. Plus this file
 // won't scale very well into a large scale app.

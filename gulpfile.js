@@ -31,4 +31,8 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./dist'))
 });
 
+// The build task called via "gulp build"
 gulp.task('build', ['js', 'css', 'html']);
+
+// The default task called via plain "gulp"
+gulp.task('default', ['build']);
