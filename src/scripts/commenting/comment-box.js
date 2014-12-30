@@ -1,4 +1,4 @@
-var React       = require('React');
+var React       = require('react');
 var API         = require('../api');
 var CommentList = require('./comment-list');
 var CommentForm = require('./comment-form');
