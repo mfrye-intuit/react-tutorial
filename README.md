@@ -2,21 +2,53 @@
 
 Walkthrough building a React app. Similar to Angular's tutorial with checking out of steps.
 
+## To install
+
+### Install dependencies
+
+You must have [npm](https://www.npmjs.org/) installed on your computer.
+
+After node is installed, run this command to install the dependencies:
+
+```sh
+npm install
+```
+
+### Install gulp
+
+We're using [gulp](http://gulpjs.com/) as our build system. Gulp helps us build and package up our app to get it ready to deploy.
+
+Install gulp with the command:
+
+```sh
+npm install gulp -g
+```
+
+You can now start the build process via the command:
+
+```sh
+gulp
+```
+
+This will build our app and start the watch process that will automaticaly rebuild the app when the code changes.
+
 ## To use
 
-Following the steps to see how the app is built. Use git to checkout a step:
+### Checkout a step
+
+Follow the steps to see how the app is built. Use git to checkout each step:
 
 ```sh
 git checkout step1
 ```
 
+Once you're ready to move on, check out the next step.
 
-Then start a server withthe following:
+### Start the server
 
-### Node
+Finally start a server with the following:
 
 ```sh
-npm install
 node server.js
 ```
 
@@ -30,15 +62,12 @@ Simple Hello World view using in browser JSX transformer.
 
 Add gulp build process to pre-compile JSX and serve files out of dist folder.
 
-Install gulp with the command:
-```
-npm install gulp -g
-```
 Then run the build process with the command:
-```
+
+```sh
 gulp
 ```
-Note: You may have to restart the server since we now want the files to be served out of dist.
+Note: You will have to restart the server since we now want the files to be served out of dist.
 
 #### Step 3
 
