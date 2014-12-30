@@ -1,9 +1,11 @@
-var React       = require('React');
+var React       = require('react');
 
 
 var CommentForm = React.createClass({
   _handleSubmit: function(e) {
     e.preventDefault();
+
+    console.log('test')
 
     var author = this.refs.author.getDOMNode().value.trim();
     var comment = this.refs.comment.getDOMNode().value.trim();
@@ -26,7 +28,7 @@ var CommentForm = React.createClass({
         </div>
 
         <div className="form-group">
-          <input type="text" className="form-control" placeholder="Your comment..." ref="comment" />
+          <textarea type="text" className="form-control" placeholder="Your comment..." ref="comment"></textarea>
         </div>
 
         <button type="submit" className="btn btn-primary">Submit</button>

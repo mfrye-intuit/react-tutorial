@@ -1,4 +1,4 @@
-var React       = require('React');
+var React       = require('react');
 var API         = require('../api');
 var CommentList = require('./comment-list');
 var CommentForm = require('./comment-form');
@@ -21,7 +21,7 @@ var CommentBox = React.createClass({
     .done(function(data) {
       _this.setState({data: data});
     })
-    .error(function() {
+    .fail(function() {
       console.log('Error!')
     });
   },
@@ -36,13 +36,12 @@ var CommentBox = React.createClass({
     .done(function(data) {
       _this.setState({data: data});
     })
-    .error(function() {
+    .fail(function() {
       console.log('Error!')
     });
   },
 
   render: function() {
-    console.log(this.state.data);
     return (
       <div className="commentBox">
         <h1>Comments</h1>

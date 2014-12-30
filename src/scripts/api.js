@@ -1,4 +1,3 @@
-
 var API = {
   getComments: function() {
     return $.ajax({
