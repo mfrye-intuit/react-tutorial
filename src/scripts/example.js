@@ -1,4 +1,7 @@
 
+// Nothing new added here
+// Check out gulpfile.js to see our new build process
+
 var CommentBox = React.createClass({
   render: function() {
     return (
