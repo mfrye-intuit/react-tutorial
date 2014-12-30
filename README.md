@@ -30,6 +30,16 @@ Simple Hello World view using in browser JSX transformer.
 
 Add gulp build process to pre-compile JSX and serve files out of dist folder.
 
+Install gulp with the command:
+```
+npm install gulp -g
+```
+Then run the build process with the command:
+```
+gulp
+```
+Note: You may have to restart the server since we now want the files to be served out of dist.
+
 #### Step 3
 
 Add CommentList and CommentForm components.
