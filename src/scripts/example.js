@@ -1,5 +1,6 @@
 
-// Adding CommonJS - in this instance Browersify
+// Step 11 - Adding CommonJS (in this instance Browersify)
+// -------------------------------------------------------
 // 
 // This file was getting rather large and it was becoming a challenge to read. Plus this file
 // won't scale very well into a large scale app.
@@ -23,8 +24,11 @@
 
 
 // Step 12 - Testing our app
+// --------------------------
 //
 // Facebook has developed a great testing framwork called Jest that is based on Jasmine. It adds an
 // an extra layer that makes it really easy to test your app.
 //
-// Go to /test/commenting.js to see how the tests are setup. 
+// Go to /test/commenting.js to see how the tests are setup.
+//
+// Run the tests via calling "gulp test"
