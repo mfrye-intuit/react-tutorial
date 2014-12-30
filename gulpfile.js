@@ -28,7 +28,7 @@ gulp.task('build', ['js', 'css', 'html']);
 // 4. This task will watch the javascript and rebuild the app
 //    when changes are made
 gulp.task('watch', function(){
-  gulp.watch('./client/scripts/**/*', ['build'])
+  gulp.watch('./src/scripts/**/*', ['build'])
 });
 
 // 5. The default task called via plain "gulp"
