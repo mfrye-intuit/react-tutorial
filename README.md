@@ -52,7 +52,9 @@ Finally start a server with the following:
 node server.js
 ```
 
-### Steps
+Now visit the running app <http://localhost:3000/>. Try opening multiple tabs!
+
+## Steps
 
 #### Step 1
 
@@ -108,5 +110,3 @@ CommonJS setup
 #### Step 12
 
 Testing with Jest
-
-And visit <http://localhost:3000/>. Try opening multiple tabs!
