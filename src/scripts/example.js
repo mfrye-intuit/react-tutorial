@@ -1,3 +1,5 @@
+
+// 1. Here we've abstracted the server call to an external API object
 var API = {
   getComments: function() {
     return $.ajax({
@@ -12,11 +14,16 @@ var CommentBox = React.createClass({
     return {data: []};
   },
 
+  // 3. We've updated this function to continue calling _loadComments
+  //    every couple seconds, defined by the prop pollInterval.
+  //    Whenever _loadComments is called it will set the state with the new values
+  //    received and re-render the component
   componentDidMount: function() {
     this._loadComments();
     setInterval(this._loadComments, this.props.pollInterval);
   },
 
+  // 2. We've updated this function to call the API object instead
   _loadComments: function() {
     var _this = this;
 
@@ -80,7 +87,8 @@ var Comment = React.createClass({
 })
 
 
-
+// 4. Notice we've added the prop pollInterval with the value 2000
+//    We want the component to recall the the server every 2 seconds
 React.render(
   <CommentBox pollInterval={2000} />,
   document.getElementById('content')
