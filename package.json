@@ -6,8 +6,8 @@
   "dependencies": {
     "body-parser": "^1.4.3",
     "express": "^4.4.5",
-    "react": "^0.12.2",
-    "react-tools": "^0.12.2"
+    "react": "*",
+    "react-tools": "*"
   },
   "devDependencies": {
     "browserify": "^8.0.2",
@@ -19,10 +19,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-  },
-  "dependencies": {
-    "react": "*",
-    "react-tools": "*"
   },
   "jest": {
     "testDirectoryName": "test",

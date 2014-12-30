@@ -1,7 +1,7 @@
 // preprocessor.js
 var ReactTools = require('react-tools');
 module.exports = {
-  process: function(src) {
+  process: function(src, path) {
     return ReactTools.transform(src);
   }
 };
