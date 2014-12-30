@@ -6,6 +6,7 @@ var API = {
     });
   },
 
+  // 2. Here is the new API method we've added
   addComment: function(data) {
     return $.ajax({
       url: "/comments",
@@ -38,6 +39,8 @@ var CommentBox = React.createClass({
     });
   },
 
+  // 1. We've now added a new function for handling the creation of a new comment
+  //    It calls the new API method we've added and sets the state when it's done
   _handleCommentSubmit: function(comment) {
     var _this = this;
 
@@ -50,6 +53,8 @@ var CommentBox = React.createClass({
     });
   },
 
+  // 3. Notice we've created a new prop for the CommentForm called submitComment
+  //    and passed the _handleCommentSubmit function to it
   render: function() {
     return (
       <div className="commentBox">
@@ -88,6 +93,8 @@ var CommentForm = React.createClass({
       return;
     }
 
+    // 4. We can now call the passed in function to handle the new comment creation
+    //    We pass in the values for new comment
     this.props.submitComment({author: author, comment: comment})
 
     this.refs.author.getDOMNode().value = '';

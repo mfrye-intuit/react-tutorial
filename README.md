@@ -1,27 +1,23 @@
 # React Tutorial
 
-This is the React comment box example from [the React tutorial](http://facebook.github.io/react/docs/tutorial.html).
+Walkthrough building a React app. Similar to Angular's tutorial with checking out of steps.
 
 ## To use
 
-There are several simple server implementations included. They all serve static files from `public/` and handle requests to `comments.json` to fetch or add data. Start a server with one of the following:
+Following the steps to see how the app is built. Use git to checkout a step:
+
+```sh
+git checkout step1
+```
+
+
+Then start a server withthe following:
 
 ### Node
 
 ```sh
 npm install
 node server.js
-```
-
-### Python
-
-```sh
-python server.py
-```
-
-### Ruby
-```sh
-ruby server.rb
 ```
 
 ### Steps
@@ -33,6 +29,16 @@ Simple Hello World view using in browser JSX transformer.
 #### Step 2
 
 Add gulp build process to pre-compile JSX and serve files out of dist folder.
+
+Install gulp with the command:
+```
+npm install gulp -g
+```
+Then run the build process with the command:
+```
+gulp
+```
+Note: You may have to restart the server since we now want the files to be served out of dist.
 
 #### Step 3
 
@@ -61,5 +67,17 @@ Form for adding new comments.
 #### Step 9
 
 Add new comments to CommentList and post to server.
+
+#### Step 10
+
+Optimize - Add new comments to state immediately. Support markdown.
+
+#### Step 11
+
+CommonJS setup
+
+#### Step 12
+
+Testing with Jest
 
 And visit <http://localhost:3000/>. Try opening multiple tabs!
