@@ -1,7 +1,7 @@
 {
   "name": "react-tutorial",
   "version": "0.0.0",
-  "description": "Code from the React tutorial.",
+  "description": "React tutorial and walkthrough",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.4.3",
@@ -20,7 +20,7 @@
     "vinyl-source-stream": "^1.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/jest-cli/bin/jest.js test",
     "start": "node server.js"
   },
   "jest": {
@@ -40,7 +40,7 @@
     "comment",
     "example"
   ],
-  "author": "petehunt",
+  "author": "michael frye",
   "bugs": {
     "url": "https://github.com/reactjs/react-tutorial/issues"
   },
