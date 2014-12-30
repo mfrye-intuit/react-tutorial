@@ -1,6 +1,10 @@
 [
   {
-    "author": "Pete Hunt",
-    "text": "Hey there!"
+  	"author": "Bruce Wayne",
+  	"comment": "I am Batman."
+  },
+  {
+  	"author": "Clark Kent",
+  	"comment": "I am Clark Kent."
   }
 ]
