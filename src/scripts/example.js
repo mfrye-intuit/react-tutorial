@@ -1,7 +1,5 @@
 
-// Nothing new added here
-// Check out gulpfile.js to see our new build process
-
+// CommentBox now contains the new CommentList and CommentForm components
 var CommentBox = React.createClass({
   render: function() {
     return (
@@ -14,6 +12,7 @@ var CommentBox = React.createClass({
   }
 });
 
+// This component will hold our created comments
 var CommentList = React.createClass({
   render: function() {
     return (
@@ -24,6 +23,7 @@ var CommentList = React.createClass({
   }
 });
 
+// The component will be the form for creating new comments
 var CommentForm = React.createClass({
   render: function() {
     return (
