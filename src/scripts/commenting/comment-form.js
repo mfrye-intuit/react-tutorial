@@ -1,3 +1,7 @@
+// The CommentForm component
+//
+// This is the form to create new comments
+
 var React       = require('react');
 
 
