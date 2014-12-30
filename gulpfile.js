@@ -3,6 +3,7 @@ var react       = require('gulp-react');
 var browserify  = require('browserify');
 var reactify    = require('reactify');
 var source      = require('vinyl-source-stream');
+var shell       = require('gulp-shell');
 
 // 1. We've updated this task to run browserify and compile our app
 //    from the entry point "app.js"
@@ -42,6 +43,11 @@ gulp.task('build', ['js', 'css', 'html']);
 gulp.task('watch', function(){
   gulp.watch('./src/scripts/**/*', ['build'])
 });
+
+// Our testing task to call jest
+gulp.task('test', shell.task([
+  './node_modules/jest-cli/bin/jest.js test'
+]));
 
 // 5. The default task called via plain "gulp"
 gulp.task('default', ['build', 'watch']);
