@@ -111,6 +111,8 @@ var CommentForm = React.createClass({
     this.refs.comment.getDOMNode().value = '';
   },
 
+  // We've also switched out the comment input for a textarea
+  // to provide more room for markup.
   render: function() {
     return (
       <form className="commentForm" onSubmit={this._handleSubmit}>
