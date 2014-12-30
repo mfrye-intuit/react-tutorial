@@ -37,6 +37,7 @@ var CommentBox = React.createClass({
     });
   },
 
+  // Note: We've also changed "this.props.data" to "this.state.data"
   render: function() {
     return (
       <div className="commentBox">
